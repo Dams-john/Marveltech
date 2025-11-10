@@ -1,0 +1,1045 @@
+<!doctype html>
+<html class="no-js" lang="en"> 
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="marveltech">
+        <meta name="author" content="TeamXcel">
+       
+        <title>marveltech</title>
+        
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"> -->
+		
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- Elegant Font Icons CSS -->
+        <link rel="stylesheet" href="css/elegant-font-icons.css">
+        <!-- Elegant Line Icons CSS -->
+        <link rel="stylesheet" href="css/elegant-line-icons.css">
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Slicknav CSS -->
+        <link rel="stylesheet" href="css/slicknav.min.css">
+        <!-- animate CSS -->
+        <link rel="stylesheet" href="css/animate.min.css">
+		<!-- OWL-Carousel CSS -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper.min.css">
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="css/main.css">
+		<!-- Responsive CSS -->
+        <link rel="stylesheet" href="css/responsive.css">
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    </head>
+      <style>
+  
+    .cta-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Primary Button */
+    .btn-primary {
+      background: linear-gradient(45deg, #007bff, #00b4d8);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.4s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #00b4d8, #007bff);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Secondary Button */
+    .btn-secondary {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.4s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: float 3s ease-in-out infinite 1.5s;
+    }
+
+    .btn-secondary:hover {
+      transform: scale(1.05);
+      background: #1ebe5a;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .sticky-bottom-bar{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 -2 4px rgba(0, 0, 0, 0, 0.1);
+    }
+    .book-consultation-btn{
+        background-color: #4caf50;
+        color: #fff;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: -1;
+    }
+
+        .service-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 40px 25px;
+      background: #fff;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transform: translateY(-5px);
+    }
+
+    .service-card h5 {
+      color: #ff007a;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .service-card h3 {
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .service-card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+
+    /* Light background number effect */
+    .service-number {
+      font-size: 100px;
+      font-weight: 800;
+      color: rgba(0, 0, 0, 0.05);
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    .service-card .content {
+      position: relative;
+      z-index: 1;
+    }
+
+ #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .testimonial-section {
+      position: relative;
+      padding: 100px 0;
+      color: #fff;
+      background: #3c0078;
+      overflow: hidden;
+    }
+
+    .testimonial-heading {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .testimonial-description {
+      font-size: 1.1rem;
+      color: #ddd;
+      margin-top: 15px;
+      max-width: 500px;
+    }
+
+    .testimonial-box {
+      position: relative;
+      background: #7426c2;
+      padding: 45px;
+      border-radius: 12px;
+      color: #fff;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    .testimonial-box::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: 0;
+      border-left: 40px solid #ff007a;
+      border-top: 40px solid transparent;
+    }
+
+    .client-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      margin-bottom: 10px;
+    }
+
+    .client-info h5 {
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+
+    .client-info small {
+      color: #ccc;
+    }
+
+    .quote-icon {
+      font-size: 3rem;
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .carousel-indicators [data-bs-target] {
+      background-color: #fff;
+    }
+
+    .carousel-indicators {
+      bottom: -40px;
+    }
+
+    @media (max-width: 767px) {
+      .testimonial-heading {
+        font-size: 2rem;
+      }
+      .testimonial-box {
+        padding: 30px;
+      }
+    }
+
+        .consulting-section {
+      background: linear-gradient(135deg, #ff0066, #b3007a);
+      color: #fff;
+      padding: 35px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* abstract shapes */
+    .consulting-section::before,
+    .consulting-section::after {
+      content: '';
+      position: absolute;
+      background: rgba(255, 255, 255, 0.08);
+      transform: rotate(45deg);
+      z-index: 0;
+    }
+    .consulting-section::before {
+      width: 200px;
+      height: 200px;
+      top: -60px;
+      left: -40px;
+      border-radius: 30%;
+    }
+    .consulting-section::after {
+      width: 250px;
+      height: 250px;
+      bottom: -60px;
+      right: -40px;
+      border-radius: 40%;
+    }
+
+    .consulting-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .graphic-img {
+      width: 100%;
+      border-radius: 15px;
+      max-height: 250px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 0.95rem;
+      opacity: 0.95;
+    }
+
+    .btn-consult {
+      background-color: #fff;
+      color: #b3007a;
+      border: none;
+      padding: 8px 22px;
+      font-weight: 600;
+      border-radius: 25px;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .btn-consult:hover {
+      background-color: #ff66a3;
+      color: #fff;
+    }
+
+        .partners-section {
+       position: relative;
+      padding: 50px 0;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* glowing abstract overlays */
+    .partners-section::before,
+    .partners-section::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      z-index: 0;
+    }
+
+    .partners-section::before {
+      width: 250px;
+      height: 250px;
+      top: -60px;
+      left: -70px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .partners-section::after {
+      width: 300px;
+      height: 300px;
+      bottom: -80px;
+      right: -60px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .partners-section h2 {
+      font-weight: 700;
+      margin-bottom: 40px;
+      font-size: 1.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .slider-track {
+      display: flex;
+      width: calc(200px * 10 * 2);
+      position: relative;
+      z-index: 1;
+    }
+
+    .partners-slider {
+      display: flex;
+      align-items: center;
+      animation: slide 25s linear infinite;
+      width: calc(200px * 10);
+    }
+
+    .partners-slider:hover {
+      animation-play-state: paused;
+    }
+
+    .partner-logo {
+      position: relative;
+      width: 180px;
+      height: 100px;
+      margin: 0 20px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .partner-logo:hover {
+      transform: scale(1.07);
+      box-shadow: 0 6px 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .partner-logo img {
+      width: 75%;
+      height: auto;
+      object-fit: contain;
+      transition: opacity 0.3s ease;
+    }
+
+    .partner-name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background:#3067f381;
+      color: #fff;
+      font-size: 0.9rem;
+      padding: 5px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .partner-logo:hover .partner-name {
+      opacity: 1;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+        .footer {
+       color: #fff;
+      padding: 60px 0 20px;
+      position: relative;
+      background-color: #0132b181;
+
+    }
+    .footer::before{
+    }
+
+    .footer .footer-logo img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+
+    .footer h5 {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .footer p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #e4e4e4;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer ul li a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer ul li a:hover {
+      color: #fff;
+    }
+
+    .footer .social-icons a {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-right: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .footer .social-icons a:hover {
+      color: #00e676;
+    }
+
+    .footer .contact-info i {
+      font-size: 1.1rem;
+      margin-right: 10px;
+      color: #fff;
+    }
+
+    .footer .email-input {
+      display: flex;
+      border-radius: 30px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .footer .email-input input {
+      flex: 1;
+      padding: 10px 20px;
+      border: none;
+      outline: none;
+    }
+
+    .footer .email-input button {
+      background-color: #ff4081;
+      border: none;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .footer-bottom {
+      background: #f8f9fc;
+      color: #333;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer-bottom a {
+      color: #0132b1;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      z-index: 999;
+    }
+
+    .whatsapp-float a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #25d366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float a:hover {
+      transform: scale(1.1);
+    }
+  </style>
+    <body data-spy="scroll" data-target="#navmenu" data-offset="70">
+
+        
+        
+        <header id="header" class="header-section">
+            <div class="container">
+                <nav class="navbar">
+                    <a href="#" class="navbar-brand">marveltech</a>
+                    <div class="d-flex menu-wrap">
+                       <div id="navmenu" class="mainmenu">
+                           <ul class="nav">
+                                <li ><a data-scroll class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a></li>
+                                <li><a data-scroll class="nav-link" href="">About </a></li>
+                                <li><a data-scroll class="nav-link" href="#">Services</a></li>
+                                <li><a data-scroll class="nav-link" href="#">Portfolio</a></li>
+                                <li><a data-scroll class="nav-link" href="#">Blog</a></li>
+                                <li><a data-scroll class="nav-link" href="#">Contact Us</a></li>
+                            </ul>
+                       </div>
+                    </div>
+                </nav>
+            </div>
+		</header>  
+		<section id="home" class="hero-section">
+		    <div class="container">
+		    	<div class="hero-inner text-center">
+                    <div class="hero-content">
+                        <h1>Design That  <br> Makes You Stand Out</h1>
+                        <p>“We build cohesive brand systems that make you confident and visible..</p>
+                        <div class="hero-btn">
+                             <div class="cta-container">
+    <button class="btn-primary">📅 Book Free Consultation</button>
+    <button class="btn-secondary">💬 Chat on WhatsApp</button>
+  </div>
+                        </div>
+                    </div>
+		    	</div>
+		    </div>
+		</section> 
+
+
+            
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <h2 class="fw-bold">What We Offer</h2>
+        <p class="text-muted">Helping your business grow faster online</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="service-card position-relative">
+          <div class="service-number">01</div>
+          <div class="content">
+            <img src="https://cdn-icons-png.flaticon.com/512/4144/4144781.png" alt="Site Optimization">
+            <!-- <h5>Better Website Performance</h5> -->
+            <h3>What we do</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio quas quasi et minus in, suscipit ea noegftgr</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="service-card position-relative">
+          <div class="service-number">02</div>
+          <div class="content">
+            <img src="https://cdn-icons-png.flaticon.com/512/10340/10340523.png" alt="Increased Traffic">
+            <!-- <h5>Reach More People</h5> -->
+            <h3>How we do it</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio quas quasi et minus in, suscipit ea noegftgr</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="service-card position-relative">
+          <div class="service-number">03</div>
+          <div class="content">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712103.png" alt="Digital Marketing">
+            <!-- <h5>Promote Your Business</h5> -->
+            <h3>Who we do it for</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non optio quas quasi et minus in, suscipit ea noegftgr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+            
+
+ <section class="testimonial-section position-relative text-white">
+    <div id="particles-js" class="position-absolute w-100 h-100"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        
+        <!-- Left Text -->
+        <div class="col-md-5 mb-5 mb-md-0">
+          <h2 class="testimonial-heading text-white">What Our Clients Say<br>About Us</h2>
+          <div class="border border-2 my-3" style="width:80px; border-color:#ff007a!important;"></div>
+          <p class="testimonial-description">
+            The trust of our clients defines who we are. We deliver quality and results that make businesses shine online.
+          </p>
+        </div>
+
+        <!-- Right Carousel -->
+        <div class="col-md-7">
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-inner">
+              
+              <!-- Testimonial 1 -->
+              <div class="carousel-item active">
+                <div class="testimonial-box">
+                  <i class="bi bi-quote quote-icon"></i>
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Client" class="client-img me-3">
+                    <div class="client-info">
+                      <h5>Rahul Mehra</h5>
+                      <small>Delhi</small>
+                    </div>
+                  </div>
+                  <p class="text-white">
+                    MarvelTech helped us grow our online visibility drastically. From zero leads to multiple inquiries every week — amazing service!
+                  </p>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="carousel-item">
+                <div class="testimonial-box">
+                  <i class="bi bi-quote quote-icon"></i>
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="client-img me-3">
+                    <div class="client-info">
+                      <h5>Amara John</h5>
+                      <small>Lagos</small>
+                    </div>
+                  </div>
+                  <p class="text-white">
+                    Their creative design and marketing strategy took our brand to the next level. We couldn’t be happier with their service!
+                  </p>
+                </div>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="carousel-item">
+                <div class="testimonial-box">
+                  <i class="bi bi-quote quote-icon"></i>
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Client" class="client-img me-3">
+                    <div class="client-info">
+                      <h5>Chika Ofor</h5>
+                      <small>Abuja</small>
+                    </div>
+                  </div>
+                  <p class="text-white">
+                    I’ve worked with several agencies, but none compare to MarvelTech’s attention to detail and timely delivery.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Indicators -->
+            <div class="carousel-indicators mt-4">
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+        
+
+        <!-- Trusted Partners Section -->
+  <section class="partners-section">
+    <div class="container">
+      <h2>Our Trusted Partners</h2>
+      <div class="slider-track">
+        <div class="partners-slider">
+          <!-- Partner Logos -->
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Google_Logo.svg"><div class="partner-name">Google</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"><div class="partner-name">Microsoft</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png"><div class="partner-name">Apple</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"><div class="partner-name">IBM</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samsung_Logo.svg"><div class="partner-name">Samsung</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Facebook_logo.svg"><div class="partner-name">Meta (Facebook)</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg"><div class="partner-name">Twitter</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Adobe_Corporate_logo.svg"><div class="partner-name">Adobe</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Intel_logo_%282020%2C_dark_blue%29.svg"><div class="partner-name">Intel</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Nvidia_logo.svg"><div class="partner-name">Nvidia</div></div>
+        </div>
+
+        <!-- Duplicate set for infinite loop -->
+        <div class="partners-slider">
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Google_Logo.svg"><div class="partner-name">Google</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"><div class="partner-name">Microsoft</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png"><div class="partner-name">Apple</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg"><div class="partner-name">IBM</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Samsung_Logo.svg"><div class="partner-name">Samsung</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Facebook_logo.svg"><div class="partner-name">Meta (Facebook)</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg"><div class="partner-name">Twitter</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Adobe_Corporate_logo.svg"><div class="partner-name">Adobe</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Intel_logo_%282020%2C_dark_blue%29.svg"><div class="partner-name">Intel</div></div>
+          <div class="partner-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Nvidia_logo.svg"><div class="partner-name">Nvidia</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+                
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* CTA Top Section */
+    .cta-section {
+      background-color: #f8f9ff;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .cta-section h2 {
+      font-weight: 700;
+      color: #000;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .cta-section p {
+      color: #555;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .cta-btn {
+      background-color: #ff2b78;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #e91e63;
+      transform: scale(1.05);
+    }
+
+    /* Footer Styling */
+    footer {
+      background: linear-gradient(135deg, #0132b1 0%, #1a50ffb3 100%);
+      color: white;
+      padding: 60px 0 40px;
+      position: relative;
+    }
+
+    footer h5 {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    footer a:hover {
+      color: #e0e0e0;
+      text-decoration: underline;
+    }
+
+    footer .footer-logo img {
+      width: 90px;
+      margin-bottom: 15px;
+    }
+
+    footer .social-icons a {
+      color: white;
+      font-size: 18px;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+
+    footer .social-icons a:hover {
+      color: #ffeb3b;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 25px;
+      z-index: 999;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5b;
+      transform: scale(1.1);
+    }
+
+    .newsletter-input {
+      border: none;
+      border-radius: 25px 0 0 25px;
+      padding: 10px 15px;
+      width: 70%;
+    }
+
+    .newsletter-btn {
+      border: none;
+      background-color: #ff4081;
+      border-radius: 0 25px 25px 0;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .newsletter-btn:hover {
+      background-color: #e91e63;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      text-align: center;
+      padding-top: 15px;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Take Your Business to the Next Level?</h2>
+      <p>Partner with MarvelTech that delivers real results.</p>
+      <button class="cta-btn">Let’s Get Started Today</button>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- Company Info -->
+        <div class="col-md-4">
+          <div class="footer-logo">
+            <img src="https://via.placeholder.com/90x90?text=Logo" alt="Logo">
+          </div>
+          <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum delectus praesentium mollitia, itaque nulla minus labore culpa voluptas! Numquam earum suscipit cum placeat illum nesciunt sit quas laboriosam expedita eos.</p>
+          <div class="social-icons mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="col-md-2">
+          <h5>Legal</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Report Abuse</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Get in Touch -->
+        <div class="col-md-4 text-white">
+          <h5>Get In Touch</h5>
+          <p><i class="fa-solid fa-location-dot me-2"></i> Lorem ipsum dolor, efefe </p>
+          <p><i class="fa-solid fa-envelope me-2"></i> info@marveltech.com</p>
+          <p><i class="fa-solid fa-phone me-2"></i> +234 704 227 1692</p>
+
+          <div class="d-flex mt-3">
+            <input type="email" class="newsletter-input" placeholder="Enter your email">
+            <button class="newsletter-btn"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+
+      
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2347042271692" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </footer>
+  <div class="footer-bottom mt-4">
+        © 2025 MarvelTech. All Rights Reserved.
+      </div>
+    </div>
+        
+		    
+
+
+
+          <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- JS Particle Config -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": false }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.3 } }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+		<a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>	
+ 		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+ 		<script src="js/vendor/tether.min.js"></script>
+ 		<script src="js/vendor/bootstrap.min.js"></script>
+ 		<script src="js/vendor/jquery.slicknav.min.js"></script>
+ 		<script src="js/vendor/owl.carousel.min.js"></script>
+ 		<script src="js/vendor/swiper.min.js"></script>
+ 		<script src="js/vendor/smooth-scroll.min.js"></script>
+ 		<script src="js/vendor/jquery.ajaxchimp.min.js"></script>
+ 		<script src="js/vendor/wow.min.js"></script>
+ 		<script src="js/main.js"></script>
+
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'999799fe9af27a91',t:'MTc2MjI5NTkwNQ=='};var a=document.createElement('script');a.src='../../cdn-cgi/challenge-platform/h/b/scripts/jsd/e8e65e95f26d/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"66c9e2d05ffd40608761a8fdcdbd0b45","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
